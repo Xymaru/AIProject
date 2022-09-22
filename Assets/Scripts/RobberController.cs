@@ -5,31 +5,40 @@ using UnityEngine;
 public class RobberController : MonoBehaviour
 {
     public Transform target;
-    public float maxVelocity = 30.0f;
-    public float turnSpeed = 50.0f;
-    public Vector3 direction;
-    public Vector3 movement;
-    public float angle;
-    public Quaternion rotation;
-    float freq = 0f;
+    public float acceleration = 1.0f;
+    public float maxVelocity = 10.0f;
+    public float turnAcceleration = 0.2f;
+    public float turnSpeed = 1.0f;
+    public float maxTurnSpeed = 10.0f;
+    public float stopDistance = 2.0f;
+    public float movSpeed;
+
+
+    public Vector3 direction = Vector3.zero;
+    public Vector3 movement = Vector3.zero;
+    public float angle = 0f;
+    public Quaternion rotation = Quaternion.identity;
+    public float freq = 0f;
+    
     void Start()
     {
-        direction = transform.position;
-        movement = Vector3.zero;
-        angle = transform.rotation.y;
-        rotation = transform.rotation;
-
     }
 
     // Update is called once per frame
     void Update()
     {
         freq += Time.deltaTime;
-        if (freq > 0.05)
-        {
-            freq -= 0.05f;
-            Seek();
-        }
+        if (freq < 0.5) return;
+
+        if (Vector3.Distance(target.transform.position, transform.position) <
+         stopDistance) return;
+        Seek();   // calls to this function should be reduced
+        turnSpeed += turnAcceleration * Time.deltaTime;
+        turnSpeed = Mathf.Min(turnSpeed, maxTurnSpeed);
+        movSpeed += acceleration * Time.deltaTime;
+        movSpeed = Mathf.Min(movSpeed, maxVelocity);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * turnSpeed);
+        transform.position += transform.forward.normalized * movSpeed * Time.deltaTime;
     }
     void Seek()
     {
@@ -37,7 +46,7 @@ public class RobberController : MonoBehaviour
         direction.y = 0.0f;
 
         movement = direction.normalized * maxVelocity;
-        angle = Mathf.Rad2Deg* Mathf.Atan2(movement.x, movement.z);
+        angle = Mathf.Rad2Deg * Mathf.Atan2(movement.x, movement.z);
         rotation = Quaternion.AngleAxis(angle, Vector3.up);
 
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * turnSpeed);
