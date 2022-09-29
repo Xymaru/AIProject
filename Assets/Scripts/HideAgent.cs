@@ -34,7 +34,7 @@ public class HideAgent : MonoBehaviour
         Ray backRay = new Ray(hidingSpot.transform.position, -dir.normalized);
         RaycastHit info;
         Debug.DrawLine(backRay.origin, backRay.direction, Color.red);
-        hidingSpot.GetComponent<Collider>().Raycast(backRay, out info, 30f);
+        hidingSpot.GetComponent<Collider>().Raycast(backRay, out info, 2000f);
         Debug.Log(backRay.origin + " " + backRay.direction);
         Debug.Log(info.point + " " + dir.normalized); 
         meshAgent.destination = (info.point + dir.normalized);
