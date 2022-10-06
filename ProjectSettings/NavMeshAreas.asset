@@ -11,10 +11,10 @@ NavMeshProjectSettings:
     cost: 1
   - name: Jump
     cost: 2
-  - name: Suelo
-    cost: 1
-  - name: Techo
-    cost: 2
+  - name: Ground
+    cost: 3
+  - name: Plaza
+    cost: 0
   - name: 
     cost: 1
   - name: 
