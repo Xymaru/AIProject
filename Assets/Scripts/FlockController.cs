@@ -21,11 +21,6 @@ public class FlockController : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(Flocking());
-    }
-
-    private IEnumerator Flocking()
-    {
         allPrefabs = new GameObject[numPrefabs];
         for (int i = 0; i < allPrefabs.Length; ++i)
         {
@@ -34,9 +29,9 @@ public class FlockController : MonoBehaviour
                                                        Random.Range(-flockLimits.z, flockLimits.z));
             allPrefabs[i] = (GameObject)Instantiate(prefab, pos, Quaternion.identity);
             allPrefabs[i].GetComponent<Flock>().controller = this;
-            yield return new WaitForSeconds(0.1f);
         }
     }
+
 
 
 
