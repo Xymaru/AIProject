@@ -7,7 +7,8 @@ public class Wander : MonoBehaviour
 {
     // Start is called before the first frame update
     public float radius = 2.0f;
-    public float offset = 3.0f;
+    public Vector3 offset = new Vector3(0, 0, 0);
+    public Vector3 worldTarget;
     NavMeshAgent m_Agent;
     void Start()
     {
@@ -17,7 +18,7 @@ public class Wander : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (m_Agent.pathStatus == NavMeshPathStatus.PathComplete)
+        if (!m_Agent.pathPending && !m_Agent.hasPath)
         {
             WanderFunc();
             Debug.Log("Path compleated, Wander call!");
@@ -26,11 +27,25 @@ public class Wander : MonoBehaviour
     void WanderFunc()
     {
         // parameters: float radius, offset;
-        Vector3 localTarget = UnityEngine.Random.insideUnitCircle * radius;
-        localTarget += new Vector3(0, 0, offset);
-        Vector3 worldTarget = transform.TransformPoint(localTarget);
-        worldTarget.y = 0f;
+        //Vector3 localTarget = UnityEngine.Random.insideUnitCircle * radius;
+        //localTarget += offset;
+        //worldTarget = transform.TransformPoint(localTarget);
+        //worldTarget.y = 0f;
+        worldTarget = RandomNavSphere(transform.position, radius, -1);
 
         m_Agent.SetDestination(worldTarget);
+    }
+
+    public Vector3 RandomNavSphere(Vector3 origin, float distance, int layermask)
+    {
+        Vector3 randomDirection = UnityEngine.Random.insideUnitSphere * distance;
+
+        randomDirection += origin;
+
+        NavMeshHit navHit;
+
+        NavMesh.SamplePosition(randomDirection, out navHit, distance, layermask);
+
+        return navHit.position;
     }
 }

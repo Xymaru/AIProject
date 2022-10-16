@@ -14,7 +14,7 @@ NavMeshProjectSettings:
   - name: Ground
     cost: 3
   - name: Plaza
-    cost: 0
+    cost: 1.5
   - name: 
     cost: 1
   - name: 
