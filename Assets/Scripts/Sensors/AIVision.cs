@@ -29,6 +29,7 @@ public class AIVision : MonoBehaviour
                 }
             }
         }
+
         return false;
     }
 }

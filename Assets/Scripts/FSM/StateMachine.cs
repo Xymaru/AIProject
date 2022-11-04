@@ -5,8 +5,12 @@ using UnityEngine;
 public class StateMachine : MonoBehaviour
 {
     State currentState;
+
+    public TMPro.TextMeshPro stateText;
+
     void Start()
     {
+
         currentState = GetInitialState();
         if (currentState != null)
             currentState.Enter();
@@ -16,6 +20,9 @@ public class StateMachine : MonoBehaviour
     {
         if (currentState != null)
             currentState.UpdateLogic();
+
+        if (stateText.text != currentState.name)
+            stateText.text = currentState.name;
     }
 
 
@@ -30,11 +37,5 @@ public class StateMachine : MonoBehaviour
     protected virtual State GetInitialState()
     {
         return null;
-    }
-
-    private void OnGUI()
-    {
-        string content = currentState != null ? currentState.name : "(no current state)";
-        GUILayout.Label($"<color='black'><size=40>{content}</size></color>");
     }
 }
