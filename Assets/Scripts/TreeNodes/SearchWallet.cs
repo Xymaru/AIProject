@@ -7,9 +7,17 @@ using Pada1.BBCore.Framework;
 [Help("Checks if there's a wallet at vision")]
 public class SearchWallet : ConditionBase
 {
+    [InParam("Vision")]
     public AIVision vision;
+    [OutParam("Target")]
+    public GameObject target;
     public override bool Check()
     {
-        return vision.UpdateVision();
+        if (vision.UpdateVision())
+        {
+            target = vision.target;
+            return true;
+        }
+        return false;
     }
 }

@@ -21,7 +21,6 @@ public class Wander : MonoBehaviour
         if (!m_Agent.pathPending && !m_Agent.hasPath)
         {
             WanderFunc();
-            Debug.Log("Path compleated, Wander call!");
         }
     }
     void WanderFunc()

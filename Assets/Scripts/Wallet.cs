@@ -16,11 +16,12 @@ public class Wallet : MonoBehaviour
         if (succes <= succesRate)
         {
             hasWallet = false;
+            Debug.Log("Wallet steal was succesfull");
             return true;
         }
 
         OnShout?.Invoke(robber);
-
+        Debug.Log("Robber has been caught");
         return false;
     }
 
