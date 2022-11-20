@@ -9,6 +9,7 @@ public class HideAgent : MonoBehaviour
     public GameObject[] hidingSpots;
     public GameObject target;
     public NavMeshAgent meshAgent;
+    public GameObject hideSpot;
     void Start()
     {
         meshAgent = GetComponent<NavMeshAgent>();
@@ -38,7 +39,7 @@ public class HideAgent : MonoBehaviour
         (float, GameObject) farFromTarget = hidingSpots.Select(
             ho => (Vector3.Distance(ho.transform.position, target.transform.position), ho)
             ).Max();
-
+        hideSpot = farFromTarget.Item2;
         meshAgent.SetDestination(farFromTarget.Item2.transform.position);
     }
 }
