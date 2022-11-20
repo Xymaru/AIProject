@@ -16,6 +16,7 @@ namespace BBUnity.Actions
 
         public override void OnStart()
         {
+            Debug.Log(cop);
             m_HideAgent = gameObject.GetComponent<HideAgent>();
             if (!m_HideAgent)
             {

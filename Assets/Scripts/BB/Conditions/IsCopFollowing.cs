@@ -28,8 +28,8 @@ namespace BBUnity.Conditions
 
             if (following){
                 cop = followers[0];
+                Debug.Log(cop); 
             }
-
             return following;
         }
     }
