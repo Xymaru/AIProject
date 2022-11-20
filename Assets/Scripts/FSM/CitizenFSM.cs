@@ -9,6 +9,7 @@ public class CitizenFSM : StateMachine
     public SittingState sitting;
     public ShoutingState shouting;
     public float timeToWait;
+    public float timeToShout;
     public float timeToSeat;
     public Animator animator;
 
@@ -35,7 +36,10 @@ public class CitizenFSM : StateMachine
     {
         return wander;
     }
-
+    public void StopAll()
+    {
+        StopAllCoroutines();
+    }
     public Coroutine Execute(IEnumerator routine)
     {
         return StartCoroutine(routine);
@@ -49,7 +53,6 @@ public class CitizenFSM : StateMachine
     public void OnRobbed(GameObject robber)
     {
         m_Robber = robber;
-        StopAllCoroutines();
         ChangeState(shouting);
     }
 

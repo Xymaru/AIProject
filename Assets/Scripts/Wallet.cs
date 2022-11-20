@@ -15,16 +15,14 @@ public class Wallet : MonoBehaviour
         if(!hasWallet) return false;
 
         float succes = UnityEngine.Random.Range(0f, 100f);
+        hasWallet = false;
 
         if (succes <= succesRate)
         {
-            hasWallet = false;
-            Debug.Log("Wallet steal was succesfull");
             return true;
         }
 
         OnRobbed?.Invoke(robber);
-        Debug.Log("Wallet steal was unsuccesfull");
         return false;
     }
 }
