@@ -33,7 +33,7 @@ public class ShoutingState : State
         }
         if (exit)
         {
-            fsm.ChangeState(fsm.shouting);
+            fsm.ChangeState(fsm.wander);
         }
     }
 

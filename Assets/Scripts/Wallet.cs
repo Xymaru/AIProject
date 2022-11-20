@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Wallet : MonoBehaviour
 {
-    public bool hasWallet { get; private set; } = true;
+    public bool hasWallet = true;
     public float succesRate = 80f;
 
     public Action<GameObject> OnRobbed;
