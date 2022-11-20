@@ -18,6 +18,8 @@ public class Wander : MonoBehaviour
     // Update is called once per frame
     public void UpdateWander()
     {
+        if (!m_Agent) return;
+
         if (!m_Agent.pathPending && !m_Agent.hasPath)
         {
             WanderFunc();
