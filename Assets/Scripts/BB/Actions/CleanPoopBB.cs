@@ -14,7 +14,7 @@ namespace BBUnity.Actions
 
         public override TaskStatus OnUpdate()
         {
-            GameObject.Destroy(poop);
+            poop.GetComponent<PoopController>().Clean();
             return TaskStatus.COMPLETED;
         }
     }

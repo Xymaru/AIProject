@@ -22,7 +22,6 @@ public class Poop : MonoBehaviour
         {
             Instantiate(poop, gameObject.transform.position, Quaternion.identity);
         }
-        Debug.Log("Poop");
         poopingCoroutine = null;
     }
 }
