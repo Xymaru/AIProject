@@ -8,12 +8,9 @@ public class Wallet : MonoBehaviour
     public bool hasWallet { get; private set; } = true;
     public float succesRate = 80f;
 
-    public Action<GameObject> OnRobbed;
-
+    public static Action<GameObject> OnShout;
     public bool Rob(GameObject robber)
     {
-        if(!hasWallet) return false;
-
         float succes = UnityEngine.Random.Range(0f, 100f);
 
         if (succes <= succesRate)
@@ -23,8 +20,9 @@ public class Wallet : MonoBehaviour
             return true;
         }
 
-        OnRobbed?.Invoke(robber);
-
+        OnShout?.Invoke(robber);
+        Debug.Log("Robber has been caught");
         return false;
     }
+
 }

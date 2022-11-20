@@ -7,28 +7,14 @@ public class CitizenFSM : StateMachine
     public WanderState wander;
     public MovingState moving;
     public SittingState sitting;
-    public ShoutingState shouting;
     public float timeToWait;
     public float timeToSeat;
-
-    private Wallet wallet;
-    private GameObject m_Robber;
 
     void Awake()
     {
         wander = new WanderState(this, gameObject);
         moving = new MovingState(this, gameObject);
         sitting = new SittingState(this, gameObject);
-        shouting = new ShoutingState(this, gameObject);
-
-        wallet = gameObject.GetComponent<Wallet>();
-
-        if (!wallet)
-        {
-            wallet = gameObject.AddComponent<Wallet>();
-        }
-
-        wallet.OnRobbed = OnRobbed;
     }
     protected override State GetInitialState()
     {
@@ -43,21 +29,5 @@ public class CitizenFSM : StateMachine
     public void Stop(IEnumerator routine)
     {
         StopCoroutine(routine);
-    }
-
-    public void OnRobbed(GameObject robber)
-    {
-        m_Robber = robber;
-        ChangeState(shouting);
-    }
-
-    public bool Shouting()
-    {
-        return GetCurrentStateName() == "Shouting";
-    }
-
-    public GameObject GetRobber()
-    {
-        return m_Robber;
     }
 }
