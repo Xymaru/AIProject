@@ -67,35 +67,35 @@ MonoBehaviour:
     id=\"4\" />\r\n          <SelectorNode id=\"8\" />\r\n          <ActionNode id=\"7\"
     />\r\n          <ConditionNode id=\"9\" />\r\n        </nodes>\r\n      </_nodes>\r\n   
     </BehaviorTree>\r\n    <RepeatDecorator id=\"5\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"False\" position=\"467 149\" name=\"Repeat\"
+    <data breakpoint=\"0\" selected=\"False\" position=\"771 256\" name=\"Repeat\"
     description=\"Repeats the execution of its child node\" cardinality=\"1\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <RepeatDecorator id=\"5\" />\r\n       
     </data>\r\n      </_data>\r\n    </RepeatDecorator>\r\n    <SelectorNode id=\"8\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"448 279\"
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"760 385\"
     name=\"Selector\" description=\"Executes all its children until one of them is
     successful\" cardinality=\"-1\" hasParent=\"True\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <SelectorNode id=\"8\" />\r\n          <RepeatDecorator
     id=\"5\" />\r\n        </data>\r\n      </_data>\r\n    </SelectorNode>\r\n   
     <DecoratorGuard id=\"2\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"164 412\" name=\"Guard\" description=\"Guard\"
+    selected=\"False\" position=\"476 518\" name=\"Guard\" description=\"Guard\"
     cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <DecoratorGuard id=\"2\" />\r\n          <SelectorNode id=\"8\" />\r\n       
     </data>\r\n      </_data>\r\n    </DecoratorGuard>\r\n    <ConditionNode id=\"9\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"341 412\"
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"653 518\"
     name=\"MyConditions/Is Shouting Near?\" description=\"Checks whether a Citizen
     is being robbed.\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <ConditionNode id=\"9\" />\r\n          <SelectorNode
     id=\"8\" />\r\n        </data>\r\n      </_data>\r\n    </ConditionNode>\r\n   
     <ActionNode id=\"7\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"589 406\" name=\"MyActions/Wander\" description=\"Agent wander around\"
+    position=\"901 512\" name=\"MyActions/Wander\" description=\"Agent wander around\"
     cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <ActionNode id=\"7\" />\r\n          <SelectorNode id=\"8\" />\r\n        </data>\r\n     
     </_data>\r\n    </ActionNode>\r\n    <ConditionEvalNode id=\"3\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"False\" position=\"164 412\" name=\"MyConditions/Has
+    <data breakpoint=\"0\" selected=\"False\" position=\"476 518\" name=\"MyConditions/Has
     target?\" description=\"Eval\" cardinality=\"1\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ConditionEvalNode id=\"3\" />\r\n       
     </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n    <ActionNode id=\"4\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"164 412\"
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"476 518\"
     name=\"MyActions/Seek\" description=\"Seek a given target\" cardinality=\"0\"
     hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
     id=\"4\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   

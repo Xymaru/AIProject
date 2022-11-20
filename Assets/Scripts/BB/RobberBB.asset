@@ -158,7 +158,7 @@ MonoBehaviour:
     target?\" description=\"Eval\" cardinality=\"1\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ConditionEvalNode id=\"45\" />\r\n       
     </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n    <ActionNode id=\"46\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"True\" position=\"658.8898
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"658.8898
     488.8889\" name=\"MyActions/Steal wallet\" description=\"Steal wallet from target\"
     cardinality=\"0\" hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <ActionNode id=\"46\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n 
