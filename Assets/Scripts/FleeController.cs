@@ -27,11 +27,15 @@ public class FleeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+    public void UpdateFlee()
+    {
         freq += Time.deltaTime;
         if (freq < 0.5) return;
 
-        if (Vector3.Distance(target.transform.position, transform.position) <
-         stopDistance) return;
+        if (Vector3.Distance(target.transform.position, transform.position) < stopDistance) return;
         Flee();   // calls to this function should be reduced
         turnSpeed += turnAcceleration * Time.deltaTime;
         turnSpeed = Mathf.Min(turnSpeed, maxTurnSpeed);
@@ -40,6 +44,7 @@ public class FleeController : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * turnSpeed);
         transform.position += transform.forward.normalized * movSpeed * Time.deltaTime;
     }
+
     void Flee()
     {
         direction = transform.position - target.transform.position;

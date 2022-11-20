@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - hide
+  - Citizen
+  - Cop
   layers:
   - Default
   - TransparentFX

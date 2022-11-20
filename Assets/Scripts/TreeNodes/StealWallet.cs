@@ -18,4 +18,3 @@ public class StealWallet : ConditionBase
         return wallet.GetComponent<Wallet>().Rob(robber);
     }
 }
-

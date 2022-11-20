@@ -9,11 +9,11 @@ public class Cop : MonoBehaviour
     NavMeshAgent agent;
     void OnEnable()
     {
-        Wallet.OnShout += Seek;
+        //Wallet.OnShout += Seek;
     }
     void OnDisable()
     {
-        Wallet.OnShout -= Seek;
+        //Wallet.OnShout -= Seek;
     }
 
     void Seek(GameObject target)

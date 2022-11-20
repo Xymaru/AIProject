@@ -38,4 +38,9 @@ public class StateMachine : MonoBehaviour
     {
         return null;
     }
+
+    public string GetCurrentStateName()
+    {
+        return currentState.name;
+    }
 }

@@ -6,18 +6,30 @@ using UnityEngine.AI;
 public class Wander : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float radius = 2.0f;
+    public float radius = 5.0f;
     public Vector3 offset = new Vector3(0, 0, 0);
     public Vector3 worldTarget;
     NavMeshAgent m_Agent;
     void Start()
     {
         m_Agent = GetComponent<NavMeshAgent>();
+
+        if (!m_Agent)
+        {
+            m_Agent = gameObject.AddComponent<NavMeshAgent>();
+        }
+    }
+
+    public void SetWanderRadius(float rad)
+    {
+        radius = rad;
     }
 
     // Update is called once per frame
     public void UpdateWander()
     {
+        if (!m_Agent) return;
+
         if (!m_Agent.pathPending && !m_Agent.hasPath)
         {
             WanderFunc();
@@ -30,21 +42,8 @@ public class Wander : MonoBehaviour
         //localTarget += offset;
         //worldTarget = transform.TransformPoint(localTarget);
         //worldTarget.y = 0f;
-        worldTarget = RandomNavSphere(transform.position, radius, -1);
+        worldTarget = NavUtils.RandomNavSphere(transform.position, radius, -1);
 
         m_Agent.SetDestination(worldTarget);
-    }
-
-    public Vector3 RandomNavSphere(Vector3 origin, float distance, int layermask)
-    {
-        Vector3 randomDirection = UnityEngine.Random.insideUnitSphere * distance;
-
-        randomDirection += origin;
-
-        NavMeshHit navHit;
-
-        NavMesh.SamplePosition(randomDirection, out navHit, distance, layermask);
-
-        return navHit.position;
     }
 }
