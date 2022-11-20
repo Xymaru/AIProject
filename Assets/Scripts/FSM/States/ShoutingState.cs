@@ -17,32 +17,32 @@ public class ShoutingState : State
     public override void Enter()
     {
         exit = false;
-        shouting = null;
-        fsm.animator.Play("Shouting");
+        fsm.animator.SetBool("Shouting", true);
     }
 
     public override void Exit()
     {
-        fsm.animator.Play("UnShouting");
-        fsm.Stop(Shouting());
+        fsm.animator.SetBool("Shouting", false);
     }
 
     public override void UpdateLogic()
     {
-        Debug.Log("Shouting");
         if (shouting == null)
         {
             shouting = fsm.Execute(Shouting());
         }
         if (exit)
         {
+            Debug.Log("Stopped shouting");
             fsm.ChangeState(fsm.wander);
         }
     }
 
     IEnumerator Shouting()
     {
-        yield return new WaitForSeconds(fsm.timeToWait);
+        Debug.Log("Shouting");
+        yield return new WaitForSeconds(fsm.timeToShout);
         exit = true;
+        shouting = null;
     }
 }
