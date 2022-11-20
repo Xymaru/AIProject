@@ -24,7 +24,7 @@ public class Wallet : MonoBehaviour
         }
 
         OnRobbed?.Invoke(robber);
-
+        Debug.Log("Wallet steal was unsuccesfull");
         return false;
     }
 }

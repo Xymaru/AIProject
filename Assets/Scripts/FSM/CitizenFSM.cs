@@ -48,6 +48,7 @@ public class CitizenFSM : StateMachine
     public void OnRobbed(GameObject robber)
     {
         m_Robber = robber;
+        StopAllCoroutines();
         ChangeState(shouting);
     }
 

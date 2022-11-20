@@ -102,68 +102,67 @@ MonoBehaviour:
     <SequenceNode id=\"43\" />\r\n          <ConditionEvalNode id=\"45\" />\r\n         
     <ActionNode id=\"46\" />\r\n        </nodes>\r\n      </_nodes>\r\n    </BehaviorTree>\r\n   
     <RepeatDecorator id=\"1\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"574.1126 91.55548\" name=\"Repeat\" description=\"Repeats
+    selected=\"False\" position=\"777.3271 237.9484\" name=\"Repeat\" description=\"Repeats
     the execution of its child node\" cardinality=\"1\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <RepeatDecorator id=\"1\" />\r\n       
     </data>\r\n      </_data>\r\n    </RepeatDecorator>\r\n    <SelectorNode id=\"42\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"528.889
-    212.2223\" name=\"Selector\" description=\"Executes all its children until one
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"732.1035
+    358.6152\" name=\"Selector\" description=\"Executes all its children until one
     of them is successful\" cardinality=\"-1\" hasParent=\"True\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <SelectorNode id=\"42\" />\r\n          <RepeatDecorator
     id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </SelectorNode>\r\n   
     <DecoratorGuard id=\"32\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"131.1106 344.4443\" name=\"Guard\" description=\"Guard\"
+    selected=\"False\" position=\"334.325 490.837\" name=\"Guard\" description=\"Guard\"
     cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <DecoratorGuard id=\"32\" />\r\n          <SelectorNode id=\"42\" />\r\n       
     </data>\r\n      </_data>\r\n    </DecoratorGuard>\r\n    <SequenceNode id=\"43\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"535.5563
-    361.1112\" name=\"Sequence\" description=\"Executes all its children in sequence
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"738.7708
+    507.504\" name=\"Sequence\" description=\"Executes all its children in sequence
     until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"43\" />\r\n         
     <SelectorNode id=\"42\" />\r\n        </data>\r\n      </_data>\r\n    </SequenceNode>\r\n   
     <ActionNode id=\"40\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"886.6671 349.9998\" name=\"MyActions/Wander\" description=\"Agent
+    position=\"1089.881 496.3925\" name=\"MyActions/Wander\" description=\"Agent
     wander around\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <ActionNode id=\"40\" />\r\n          <SelectorNode
     id=\"42\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
     <ConditionEvalNode id=\"33\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"131.1106 344.4443\" name=\"MyConditions/Is Cop
-    Following?\" description=\"Eval\" cardinality=\"1\" hasParent=\"False\">\r\n         
-    <BehaviorTree id=\"0\" />\r\n          <ConditionEvalNode id=\"33\" />\r\n       
-    </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n    <ActionNode id=\"34\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"131.1106
-    344.4443\" name=\"MyActions/Hide\" description=\"Get the Vector3 for hiding.\"
-    cardinality=\"0\" hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n         
-    <ActionNode id=\"34\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
-    <DecoratorGuard id=\"36\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"397.7793 487.7779\" name=\"Guard\" description=\"Guard\"
+    selected=\"False\" position=\"334.325 490.837\" name=\"MyConditions/Is Cop Following?\"
+    description=\"Eval\" cardinality=\"1\" hasParent=\"False\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <ConditionEvalNode id=\"33\" />\r\n        </data>\r\n     
+    </_data>\r\n    </ConditionEvalNode>\r\n    <ActionNode id=\"34\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"False\" position=\"334.325 490.837\" name=\"MyActions/Hide\"
+    description=\"Get the Vector3 for hiding.\" cardinality=\"0\" hasParent=\"False\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"34\" />\r\n        </data>\r\n     
+    </_data>\r\n    </ActionNode>\r\n    <DecoratorGuard id=\"36\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"False\" position=\"600.9934 634.1707\" name=\"Guard\"
+    description=\"Guard\" cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <DecoratorGuard id=\"36\" />\r\n          <SequenceNode
+    id=\"43\" />\r\n        </data>\r\n      </_data>\r\n    </DecoratorGuard>\r\n   
+    <DecoratorGuard id=\"44\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"862.1042 635.2818\" name=\"Guard\" description=\"Guard\"
     cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
-    <DecoratorGuard id=\"36\" />\r\n          <SequenceNode id=\"43\" />\r\n       
-    </data>\r\n      </_data>\r\n    </DecoratorGuard>\r\n    <DecoratorGuard id=\"44\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"658.8898
-    488.8889\" name=\"Guard\" description=\"Guard\" cardinality=\"1\" hasParent=\"True\">\r\n         
-    <BehaviorTree id=\"0\" />\r\n          <DecoratorGuard id=\"44\" />\r\n         
-    <SequenceNode id=\"43\" />\r\n        </data>\r\n      </_data>\r\n    </DecoratorGuard>\r\n   
-    <ConditionEvalNode id=\"37\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"397.7793 487.7779\" name=\"MyConditions/Is Wallet
-    Near?\" description=\"Eval\" cardinality=\"1\" hasParent=\"False\">\r\n         
-    <BehaviorTree id=\"0\" />\r\n          <ConditionEvalNode id=\"37\" />\r\n       
-    </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n    <ActionNode id=\"38\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"397.7793
-    487.7779\" name=\"MyActions/Seek\" description=\"Seek a given target\" cardinality=\"0\"
-    hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
-    id=\"38\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
-    <ConditionEvalNode id=\"45\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"658.8898 488.8889\" name=\"MyConditions/Reached
+    <DecoratorGuard id=\"44\" />\r\n          <SequenceNode id=\"43\" />\r\n       
+    </data>\r\n      </_data>\r\n    </DecoratorGuard>\r\n    <ConditionEvalNode
+    id=\"37\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"600.9934 634.1707\" name=\"MyConditions/Is Wallet Near?\" description=\"Eval\"
+    cardinality=\"1\" hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n         
+    <ConditionEvalNode id=\"37\" />\r\n        </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n   
+    <ActionNode id=\"38\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"600.9934 634.1707\" name=\"MyActions/Seek\" description=\"Seek a given
+    target\" cardinality=\"0\" hasParent=\"False\">\r\n          <BehaviorTree id=\"0\"
+    />\r\n          <ActionNode id=\"38\" />\r\n        </data>\r\n      </_data>\r\n   
+    </ActionNode>\r\n    <ConditionEvalNode id=\"45\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"False\" position=\"862.1042 635.2818\" name=\"MyConditions/Reached
     target?\" description=\"Eval\" cardinality=\"1\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ConditionEvalNode id=\"45\" />\r\n       
     </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n    <ActionNode id=\"46\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"True\" position=\"658.8898
-    488.8889\" name=\"MyActions/Steal wallet\" description=\"Steal wallet from target\"
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"862.1042
+    635.2818\" name=\"MyActions/Steal wallet\" description=\"Steal wallet from target\"
     cardinality=\"0\" hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <ActionNode id=\"46\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n 
     </editorInfo>\r\n</BehaviorBricks>"
-  zoom: 0.9
+  zoom: 0.8
   subslist:
   - {fileID: 11400000, guid: 19361dbf16ee73142a0d57381405e8ac, type: 2}
   _guid: 5b95b248fa7875e4590e63ace4903cf8

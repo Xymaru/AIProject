@@ -27,6 +27,7 @@ public class ShoutingState : State
 
     public override void UpdateLogic()
     {
+        Debug.Log("Shouting");
         if (shouting == null)
         {
             shouting = fsm.Execute(Shouting());

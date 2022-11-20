@@ -31,7 +31,6 @@ public class Wander : MonoBehaviour
         //worldTarget = transform.TransformPoint(localTarget);
         //worldTarget.y = 0f;
         worldTarget = RandomNavSphere(transform.position, radius, -1);
-        Debug.Log("Destination is " + worldTarget);
         m_Agent.SetDestination(worldTarget);
     }
 

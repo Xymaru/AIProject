@@ -68,39 +68,40 @@ MonoBehaviour:
     <SequenceNode id=\"24\" />\r\n          <ConditionNode id=\"25\" />\r\n         
     <ParallelNode id=\"31\" />\r\n        </nodes>\r\n      </_nodes>\r\n    </BehaviorTree>\r\n   
     <SequenceNode id=\"24\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"470 82\" name=\"Sequence\" description=\"Executes all its children
-    in sequence until all of them are successful\" cardinality=\"-1\" hasParent=\"False\">\r\n         
+    position=\"532.8331 42.49997\" name=\"Sequence\" description=\"Executes all its
+    children in sequence until all of them are successful\" cardinality=\"-1\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"24\" />\r\n       
     </data>\r\n      </_data>\r\n    </SequenceNode>\r\n    <ParallelNode id=\"31\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"284 282\"
-    name=\"Parallel\" description=\"Executes all its children in parallel until all
-    of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n         
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"346.833
+    242.5\" name=\"Parallel\" description=\"Executes all its children in parallel
+    until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ParallelNode id=\"31\" />\r\n         
     <SequenceNode id=\"24\" />\r\n        </data>\r\n      </_data>\r\n    </ParallelNode>\r\n   
     <ConditionNode id=\"25\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"580 326\" name=\"MyConditions/StealWallet\" description=\"Checks
-    if there's a wallet at vision\" cardinality=\"0\" hasParent=\"True\">\r\n         
+    selected=\"False\" position=\"642.8342 286.5\" name=\"MyConditions/StealWallet\"
+    description=\"Checks if there's a wallet at vision\" cardinality=\"0\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ConditionNode id=\"25\" />\r\n         
     <SequenceNode id=\"24\" />\r\n        </data>\r\n      </_data>\r\n    </ConditionNode>\r\n   
     <RepeatUntilSuccess id=\"32\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"118 420\" name=\"Repeat Until Success\" description=\"Repeats
-    the execution of its child node until it success\" cardinality=\"1\" hasParent=\"True\">\r\n         
-    <BehaviorTree id=\"0\" />\r\n          <RepeatUntilSuccess id=\"32\" />\r\n         
-    <ParallelNode id=\"31\" />\r\n        </data>\r\n      </_data>\r\n    </RepeatUntilSuccess>\r\n   
-    <SubbehaviorNode id=\"20\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"True\" position=\"424 534\" name=\"ToSteal\" description=\"\" cardinality=\"-1\"
-    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <SubbehaviorNode
-    id=\"20\" />\r\n          <ParallelNode id=\"31\" />\r\n        </data>\r\n     
-    </_data>\r\n    </SubbehaviorNode>\r\n    <ConditionEvalNode id=\"0\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"0 0\"
-    name=\"AlwaysTrue\" description=\"Eval\" cardinality=\"1\" hasParent=\"False\">\r\n         
-    <BehaviorTree id=\"0\" />\r\n        </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n   
-    <ConditionNode id=\"27\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"146 582\" name=\"MyConditions/SearchWallet\" description=\"Checks
-    if there's a wallet at vision\" cardinality=\"0\" hasParent=\"True\">\r\n         
-    <BehaviorTree id=\"0\" />\r\n          <ConditionNode id=\"27\" />\r\n         
-    <RepeatUntilSuccess id=\"32\" />\r\n        </data>\r\n      </_data>\r\n   
-    </ConditionNode>\r\n  </editorInfo>\r\n</BehaviorBricks>"
+    selected=\"False\" position=\"180.8333 380.5\" name=\"Repeat Until Success\"
+    description=\"Repeats the execution of its child node until it success\" cardinality=\"1\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <RepeatUntilSuccess
+    id=\"32\" />\r\n          <ParallelNode id=\"31\" />\r\n        </data>\r\n     
+    </_data>\r\n    </RepeatUntilSuccess>\r\n    <SubbehaviorNode id=\"20\">\r\n     
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"486.8329
+    494.4999\" name=\"ToSteal\" description=\"\" cardinality=\"-1\" hasParent=\"True\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <SubbehaviorNode id=\"20\" />\r\n         
+    <ParallelNode id=\"31\" />\r\n        </data>\r\n      </_data>\r\n    </SubbehaviorNode>\r\n   
+    <ConditionEvalNode id=\"0\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"0 0\" name=\"AlwaysTrue\" description=\"Eval\"
+    cardinality=\"1\" hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n       
+    </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n    <ConditionNode id=\"27\">\r\n     
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"208.8334
+    542.4999\" name=\"MyConditions/SearchWallet\" description=\"Checks if there's
+    a wallet at vision\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <ConditionNode id=\"27\" />\r\n          <RepeatUntilSuccess
+    id=\"32\" />\r\n        </data>\r\n      </_data>\r\n    </ConditionNode>\r\n 
+    </editorInfo>\r\n</BehaviorBricks>"
   zoom: 0.5
   subslist:
   - {fileID: 11400000, guid: 91eedb54d1521bf4899e8f6c89278662, type: 2}
