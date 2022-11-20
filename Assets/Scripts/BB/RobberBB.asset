@@ -15,44 +15,43 @@ MonoBehaviour:
   brickName: Assets/Scripts/BB/RobberBB.asset
   xml: "\uFEFF<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<BehaviorBricks xmlns:ref=\"urn:padaone\"
     version=\"1.0\">\r\n  <BehaviorTree id=\"0\" />\r\n  <runtimeInfo>\r\n    <BehaviorTree
-    id=\"0\" guid=\"5b95b248fa7875e4590e63ace4903cf8\" nextId=\"47\">\r\n      <root>\r\n       
+    id=\"0\" guid=\"5b95b248fa7875e4590e63ace4903cf8\" nextId=\"50\">\r\n      <root>\r\n       
     <RepeatDecorator id=\"1\" />\r\n      </root>\r\n      <inputParams>\r\n       
     <inputValues>\r\n          <entry name=\"Target\" type=\"UnityEngine.GameObject\"
-    isBlackboard=\"False\" />\r\n          <entry name=\"Cop\" type=\"UnityEngine.GameObject\"
     isBlackboard=\"False\" />\r\n        </inputValues>\r\n      </inputParams>\r\n     
-    <outputParams>\r\n        <outputValues>\r\n          <entry name=\"Cop\" type=\"UnityEngine.GameObject\"
-    isBlackboard=\"True\" />\r\n        </outputValues>\r\n      </outputParams>\r\n     
-    <localParams />\r\n    </BehaviorTree>\r\n    <RepeatDecorator id=\"1\" loops=\"-1\"
-    policy=\"ContinueWhenChildFails\">\r\n      <child>\r\n        <SelectorNode
-    id=\"42\" />\r\n      </child>\r\n      <inputParams />\r\n      <outputParams
-    />\r\n      <localParams />\r\n    </RepeatDecorator>\r\n    <SelectorNode id=\"42\">\r\n     
-    <children>\r\n        <elem>\r\n          <DecoratorGuard id=\"32\" />\r\n       
-    </elem>\r\n        <elem>\r\n          <SequenceNode id=\"43\" />\r\n       
-    </elem>\r\n        <elem>\r\n          <ActionNode id=\"40\" />\r\n        </elem>\r\n     
-    </children>\r\n      <inputParams />\r\n      <outputParams />\r\n      <localParams
-    />\r\n    </SelectorNode>\r\n    <DecoratorGuard id=\"32\">\r\n      <guard>\r\n       
-    <ConditionEvalNode id=\"33\" />\r\n      </guard>\r\n      <child>\r\n       
-    <ActionNode id=\"34\" />\r\n      </child>\r\n      <inputParams />\r\n     
-    <outputParams />\r\n      <localParams />\r\n    </DecoratorGuard>\r\n    <SequenceNode
-    id=\"43\">\r\n      <children>\r\n        <elem>\r\n          <DecoratorGuard
+    <outputParams />\r\n      <localParams>\r\n        <localValues>\r\n         
+    <entry name=\"Cop\" type=\"UnityEngine.GameObject\" isBlackboard=\"False\" />\r\n       
+    </localValues>\r\n      </localParams>\r\n    </BehaviorTree>\r\n    <RepeatDecorator
+    id=\"1\" loops=\"-1\" policy=\"ContinueWhenChildFails\">\r\n      <child>\r\n       
+    <SelectorNode id=\"42\" />\r\n      </child>\r\n      <inputParams />\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </RepeatDecorator>\r\n    <SelectorNode
+    id=\"42\">\r\n      <children>\r\n        <elem>\r\n          <DecoratorGuard
+    id=\"47\" />\r\n        </elem>\r\n        <elem>\r\n          <SequenceNode
+    id=\"43\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"40\"
+    />\r\n        </elem>\r\n      </children>\r\n      <inputParams />\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </SelectorNode>\r\n    <DecoratorGuard
+    id=\"47\">\r\n      <guard>\r\n        <ConditionEvalNode id=\"48\" />\r\n     
+    </guard>\r\n      <child>\r\n        <ActionNode id=\"49\" />\r\n      </child>\r\n     
+    <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </DecoratorGuard>\r\n   
+    <SequenceNode id=\"43\">\r\n      <children>\r\n        <elem>\r\n          <DecoratorGuard
     id=\"36\" />\r\n        </elem>\r\n        <elem>\r\n          <DecoratorGuard
     id=\"44\" />\r\n        </elem>\r\n      </children>\r\n      <inputParams />\r\n     
     <outputParams />\r\n      <localParams />\r\n    </SequenceNode>\r\n    <ActionNode
     id=\"40\" action=\"MyActions/Wander\">\r\n      <inputParams>\r\n        <inputValues>\r\n         
     <entry name=\"Radius\" type=\"System.Single\" isBlackboard=\"False\" value=\"5\"
     />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n     
-    <localParams />\r\n    </ActionNode>\r\n    <ConditionEvalNode id=\"33\" policy=\"WAIT_UNTIL_FALSE_AND_FAIL\"
+    <localParams />\r\n    </ActionNode>\r\n    <ConditionEvalNode id=\"48\" policy=\"WAIT_UNTIL_FALSE_AND_FAIL\"
     name=\"MyConditions/Is Cop Following?\">\r\n      <inputParams />\r\n      <outputParams>\r\n       
     <outputValues>\r\n          <entry name=\"Cop\" type=\"UnityEngine.GameObject\"
     isBlackboard=\"True\" blackboard=\"Cop\" />\r\n        </outputValues>\r\n     
     </outputParams>\r\n      <localParams />\r\n    </ConditionEvalNode>\r\n    <ActionNode
-    id=\"34\" action=\"MyActions/Hide\">\r\n      <inputParams>\r\n        <inputValues>\r\n         
-    <entry name=\"Seeker\" type=\"UnityEngine.GameObject\" isBlackboard=\"True\"
-    blackboard=\"Cop\" />\r\n        </inputValues>\r\n      </inputParams>\r\n     
-    <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n    <DecoratorGuard
-    id=\"36\">\r\n      <guard>\r\n        <ConditionEvalNode id=\"37\" />\r\n     
-    </guard>\r\n      <child>\r\n        <ActionNode id=\"38\" />\r\n      </child>\r\n     
-    <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </DecoratorGuard>\r\n   
+    id=\"49\" action=\"MyActions/Hide\">\r\n      <inputParams>\r\n        <inputValues>\r\n         
+    <entry name=\"Cop\" type=\"UnityEngine.GameObject\" isBlackboard=\"True\" blackboard=\"Cop\"
+    />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n     
+    <localParams />\r\n    </ActionNode>\r\n    <DecoratorGuard id=\"36\">\r\n     
+    <guard>\r\n        <ConditionEvalNode id=\"37\" />\r\n      </guard>\r\n     
+    <child>\r\n        <ActionNode id=\"38\" />\r\n      </child>\r\n      <inputParams
+    />\r\n      <outputParams />\r\n      <localParams />\r\n    </DecoratorGuard>\r\n   
     <DecoratorGuard id=\"44\">\r\n      <guard>\r\n        <ConditionEvalNode id=\"45\"
     />\r\n      </guard>\r\n      <child>\r\n        <ActionNode id=\"46\" />\r\n     
     </child>\r\n      <inputParams />\r\n      <outputParams />\r\n      <localParams
@@ -82,21 +81,21 @@ MonoBehaviour:
     </runtimeInfo>\r\n  <editorInfo>\r\n    <BehaviorTree id=\"0\" _name=\"RobberBB\"
     _description=\"Hide in hiding spots.\" _removeIfClosed=\"False\">\r\n      <_rootList>\r\n       
     <elem>\r\n          <RepeatDecorator id=\"1\" />\r\n        </elem>\r\n       
-    <elem>\r\n          <DecoratorGuard id=\"32\" />\r\n        </elem>\r\n       
-    <elem>\r\n          <ConditionEvalNode id=\"33\" />\r\n        </elem>\r\n       
-    <elem>\r\n          <ActionNode id=\"34\" />\r\n        </elem>\r\n        <elem>\r\n         
-    <DecoratorGuard id=\"36\" />\r\n        </elem>\r\n        <elem>\r\n         
-    <ConditionEvalNode id=\"37\" />\r\n        </elem>\r\n        <elem>\r\n         
-    <ActionNode id=\"38\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode
-    id=\"40\" />\r\n        </elem>\r\n        <elem>\r\n          <SelectorNode
+    <elem>\r\n          <DecoratorGuard id=\"36\" />\r\n        </elem>\r\n       
+    <elem>\r\n          <ConditionEvalNode id=\"37\" />\r\n        </elem>\r\n       
+    <elem>\r\n          <ActionNode id=\"38\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <ActionNode id=\"40\" />\r\n        </elem>\r\n        <elem>\r\n          <SelectorNode
     id=\"42\" />\r\n        </elem>\r\n        <elem>\r\n          <SequenceNode
     id=\"43\" />\r\n        </elem>\r\n        <elem>\r\n          <DecoratorGuard
     id=\"44\" />\r\n        </elem>\r\n        <elem>\r\n          <ConditionEvalNode
     id=\"45\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"46\"
-    />\r\n        </elem>\r\n      </_rootList>\r\n      <_nodes>\r\n        <nodes>\r\n         
+    />\r\n        </elem>\r\n        <elem>\r\n          <DecoratorGuard id=\"47\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <ConditionEvalNode id=\"48\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"49\" />\r\n       
+    </elem>\r\n      </_rootList>\r\n      <_nodes>\r\n        <nodes>\r\n         
     <RepeatDecorator id=\"1\" />\r\n          <SelectorNode id=\"42\" />\r\n         
-    <DecoratorGuard id=\"32\" />\r\n          <ConditionEvalNode id=\"33\" />\r\n         
-    <ActionNode id=\"34\" />\r\n          <DecoratorGuard id=\"36\" />\r\n         
+    <ActionNode id=\"49\" />\r\n          <ConditionEvalNode id=\"48\" />\r\n         
+    <DecoratorGuard id=\"47\" />\r\n          <DecoratorGuard id=\"36\" />\r\n         
     <ConditionEvalNode id=\"37\" />\r\n          <ActionNode id=\"38\" />\r\n         
     <ActionNode id=\"40\" />\r\n          <DecoratorGuard id=\"44\" />\r\n         
     <SequenceNode id=\"43\" />\r\n          <ConditionEvalNode id=\"45\" />\r\n         
@@ -111,10 +110,10 @@ MonoBehaviour:
     of them is successful\" cardinality=\"-1\" hasParent=\"True\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <SelectorNode id=\"42\" />\r\n          <RepeatDecorator
     id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </SelectorNode>\r\n   
-    <DecoratorGuard id=\"32\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"334.325 490.837\" name=\"Guard\" description=\"Guard\"
+    <DecoratorGuard id=\"47\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"288.5719 524.2858\" name=\"Guard\" description=\"Guard\"
     cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
-    <DecoratorGuard id=\"32\" />\r\n          <SelectorNode id=\"42\" />\r\n       
+    <DecoratorGuard id=\"47\" />\r\n          <SelectorNode id=\"42\" />\r\n       
     </data>\r\n      </_data>\r\n    </DecoratorGuard>\r\n    <SequenceNode id=\"43\">\r\n     
     <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"738.7708
     507.504\" name=\"Sequence\" description=\"Executes all its children in sequence
@@ -126,34 +125,35 @@ MonoBehaviour:
     wander around\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <ActionNode id=\"40\" />\r\n          <SelectorNode
     id=\"42\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
-    <ConditionEvalNode id=\"33\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"334.325 490.837\" name=\"MyConditions/Is Cop Following?\"
-    description=\"Eval\" cardinality=\"1\" hasParent=\"False\">\r\n          <BehaviorTree
-    id=\"0\" />\r\n          <ConditionEvalNode id=\"33\" />\r\n        </data>\r\n     
-    </_data>\r\n    </ConditionEvalNode>\r\n    <ActionNode id=\"34\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"False\" position=\"334.325 490.837\" name=\"MyActions/Hide\"
-    description=\"Get the Vector3 for hiding.\" cardinality=\"0\" hasParent=\"False\">\r\n         
-    <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"34\" />\r\n        </data>\r\n     
-    </_data>\r\n    </ActionNode>\r\n    <DecoratorGuard id=\"36\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"False\" position=\"600.9934 634.1707\" name=\"Guard\"
-    description=\"Guard\" cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree
-    id=\"0\" />\r\n          <DecoratorGuard id=\"36\" />\r\n          <SequenceNode
-    id=\"43\" />\r\n        </data>\r\n      </_data>\r\n    </DecoratorGuard>\r\n   
-    <DecoratorGuard id=\"44\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"862.1042 635.2818\" name=\"Guard\" description=\"Guard\"
+    <ConditionEvalNode id=\"48\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"288.5719 524.2858\" name=\"MyConditions/Is Cop
+    Following?\" description=\"Eval\" cardinality=\"1\" hasParent=\"False\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <ConditionEvalNode id=\"48\" />\r\n       
+    </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n    <ActionNode id=\"49\">\r\n     
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"288.5719
+    524.2858\" name=\"MyActions/Hide\" description=\"Get the Vector3 for hiding.\"
+    cardinality=\"0\" hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n         
+    <ActionNode id=\"49\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
+    <DecoratorGuard id=\"36\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"600.9934 634.1707\" name=\"Guard\" description=\"Guard\"
     cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
-    <DecoratorGuard id=\"44\" />\r\n          <SequenceNode id=\"43\" />\r\n       
-    </data>\r\n      </_data>\r\n    </DecoratorGuard>\r\n    <ConditionEvalNode
-    id=\"37\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"600.9934 634.1707\" name=\"MyConditions/Is Wallet Near?\" description=\"Eval\"
-    cardinality=\"1\" hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n         
-    <ConditionEvalNode id=\"37\" />\r\n        </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n   
-    <ActionNode id=\"38\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"600.9934 634.1707\" name=\"MyActions/Seek\" description=\"Seek a given
-    target\" cardinality=\"0\" hasParent=\"False\">\r\n          <BehaviorTree id=\"0\"
-    />\r\n          <ActionNode id=\"38\" />\r\n        </data>\r\n      </_data>\r\n   
-    </ActionNode>\r\n    <ConditionEvalNode id=\"45\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"False\" position=\"862.1042 635.2818\" name=\"MyConditions/Reached
+    <DecoratorGuard id=\"36\" />\r\n          <SequenceNode id=\"43\" />\r\n       
+    </data>\r\n      </_data>\r\n    </DecoratorGuard>\r\n    <DecoratorGuard id=\"44\">\r\n     
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"862.1042
+    635.2818\" name=\"Guard\" description=\"Guard\" cardinality=\"1\" hasParent=\"True\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <DecoratorGuard id=\"44\" />\r\n         
+    <SequenceNode id=\"43\" />\r\n        </data>\r\n      </_data>\r\n    </DecoratorGuard>\r\n   
+    <ConditionEvalNode id=\"37\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"600.9934 634.1707\" name=\"MyConditions/Is Wallet
+    Near?\" description=\"Eval\" cardinality=\"1\" hasParent=\"False\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <ConditionEvalNode id=\"37\" />\r\n       
+    </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n    <ActionNode id=\"38\">\r\n     
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"600.9934
+    634.1707\" name=\"MyActions/Seek\" description=\"Seek a given target\" cardinality=\"0\"
+    hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
+    id=\"38\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
+    <ConditionEvalNode id=\"45\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"862.1042 635.2818\" name=\"MyConditions/Reached
     target?\" description=\"Eval\" cardinality=\"1\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ConditionEvalNode id=\"45\" />\r\n       
     </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n    <ActionNode id=\"46\">\r\n     
@@ -162,7 +162,7 @@ MonoBehaviour:
     cardinality=\"0\" hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <ActionNode id=\"46\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n 
     </editorInfo>\r\n</BehaviorBricks>"
-  zoom: 0.8
+  zoom: 0.7
   subslist:
   - {fileID: 11400000, guid: 19361dbf16ee73142a0d57381405e8ac, type: 2}
   _guid: 5b95b248fa7875e4590e63ace4903cf8

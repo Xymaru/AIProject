@@ -10,9 +10,9 @@ namespace BBUnity.Actions
     {
         HideAgent m_HideAgent;
 
-        [InParam("Seeker")]
+        [InParam("Cop")]
         [Help("Seeker to hide from")]
-        public GameObject seeker;
+        public GameObject cop;
 
         public override void OnStart()
         {
@@ -21,7 +21,7 @@ namespace BBUnity.Actions
             {
                 m_HideAgent = gameObject.AddComponent<HideAgent>();
             }
-            m_HideAgent.target = seeker;
+            m_HideAgent.target = cop;
         }
 
         public override TaskStatus OnUpdate()

@@ -69,37 +69,37 @@ MonoBehaviour:
     />\r\n          <ActionNode id=\"12\" />\r\n          <ActionNode id=\"31\" />\r\n         
     <ParallelNode id=\"33\" />\r\n        </nodes>\r\n      </_nodes>\r\n    </BehaviorTree>\r\n   
     <RepeatDecorator id=\"10\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"552.3105 -102.4487\" name=\"Repeat\" description=\"Repeats
+    selected=\"False\" position=\"968.3334 390.1305\" name=\"Repeat\" description=\"Repeats
     the execution of its child node\" cardinality=\"1\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <RepeatDecorator id=\"10\" />\r\n       
     </data>\r\n      </_data>\r\n    </RepeatDecorator>\r\n    <ParallelNode id=\"11\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"402.3077
-    -8.698578\" name=\"Parallel\" description=\"Executes all its children in parallel
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"960.5532
+    524.9916\" name=\"Parallel\" description=\"Executes all its children in parallel
     until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ParallelNode id=\"11\" />\r\n         
     <RepeatDecorator id=\"10\" />\r\n        </data>\r\n      </_data>\r\n    </ParallelNode>\r\n   
     <ActionNode id=\"12\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"255.9768 149.5511\" name=\"MyActions/Wander\" description=\"Agent
+    position=\"599.7784 655.4637\" name=\"MyActions/Wander\" description=\"Agent
     wander around\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <ActionNode id=\"12\" />\r\n          <ParallelNode
     id=\"11\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
     <ParallelNode id=\"33\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"615.7145 191.4286\" name=\"Parallel\" description=\"Executes all its
+    position=\"959.5163 697.3412\" name=\"Parallel\" description=\"Executes all its
     children in parallel until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ParallelNode id=\"33\" />\r\n         
     <ParallelNode id=\"11\" />\r\n        </data>\r\n      </_data>\r\n    </ParallelNode>\r\n   
     <ConditionNode id=\"34\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"True\" position=\"342.8566 364.2853\" name=\"MyConditions/Is Poop
+    selected=\"False\" position=\"686.6581 870.1979\" name=\"MyConditions/Is Poop
     Near?\" description=\"Checks whether poop is near.\" cardinality=\"0\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ConditionNode id=\"34\" />\r\n         
     <ParallelNode id=\"33\" />\r\n        </data>\r\n      </_data>\r\n    </ConditionNode>\r\n   
     <ActionNode id=\"27\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"562.8578 372.8575\" name=\"Navigation/MoveToGameObject\" description=\"Moves
+    position=\"906.6593 878.7701\" name=\"Navigation/MoveToGameObject\" description=\"Moves
     the game object towards a given target by using a NavMeshAgent\" cardinality=\"0\"
     hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
     id=\"27\" />\r\n          <ParallelNode id=\"33\" />\r\n        </data>\r\n     
     </_data>\r\n    </ActionNode>\r\n    <ActionNode id=\"31\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"False\" position=\"829.9996 355.7144\" name=\"MyActions/Clean
+    <data breakpoint=\"0\" selected=\"False\" position=\"1173.801 861.6271\" name=\"MyActions/Clean
     poop\" description=\"Clean poop\" cardinality=\"0\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"31\" />\r\n         
     <ParallelNode id=\"33\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
@@ -107,6 +107,6 @@ MonoBehaviour:
     selected=\"False\" position=\"0 0\" name=\"AlwaysTrue\" description=\"Eval\"
     cardinality=\"1\" hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n       
     </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n  </editorInfo>\r\n</BehaviorBricks>"
-  zoom: 0.7
+  zoom: 0.9
   subslist: []
   _guid: 83718f1c54272d84eb7b80058a1a367f

@@ -38,6 +38,8 @@ public class SeekController : MonoBehaviour
 
     private bool Seek()
     {
+        if (!target) return false;
+
         if (Vector3.Distance(transform.position, target.transform.position) > stopDistance)
         {
             agent.destination = target.transform.position;

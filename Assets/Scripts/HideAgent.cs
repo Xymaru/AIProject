@@ -12,7 +12,18 @@ public class HideAgent : MonoBehaviour
     void Start()
     {
         meshAgent = GetComponent<NavMeshAgent>();
+
+        if (!meshAgent)
+        {
+            meshAgent = gameObject.AddComponent<NavMeshAgent>();
+        }
+
         hidingSpots = GameObject.FindGameObjectsWithTag("hide");
+    }
+
+    private void Update()
+    {
+        
     }
 
     public void UpdateHide()
@@ -24,22 +35,10 @@ public class HideAgent : MonoBehaviour
     {
         if (meshAgent == null) return;
 
-        Func<GameObject, float> distance =
-            (hs) => Vector3.Distance(target.transform.position,
-                                     hs.transform.position);
+        (float, GameObject) farFromTarget = hidingSpots.Select(
+            ho => (Vector3.Distance(ho.transform.position, target.transform.position), ho)
+            ).Max();
 
-        (float, GameObject) result = hidingSpots.Select(
-            ho => (distance(ho), ho)
-            ).Min();
-
-        GameObject hidingSpot = result.Item2;
-        Vector3 dir = hidingSpot.transform.position - target.transform.position;
-
-        Ray backRay = new Ray(hidingSpot.transform.position, -dir.normalized);
-        RaycastHit info;
-        Debug.DrawLine(backRay.origin, backRay.direction, Color.red);
-        hidingSpot.GetComponent<Collider>().Raycast(backRay, out info, 2000f);
-
-        meshAgent.destination = (info.point + dir.normalized);
+        meshAgent.SetDestination(farFromTarget.Item2.transform.position);
     }
 }
