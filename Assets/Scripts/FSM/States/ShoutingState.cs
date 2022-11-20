@@ -18,10 +18,12 @@ public class ShoutingState : State
     {
         exit = false;
         shouting = null;
+        fsm.animator.Play("Shouting");
     }
 
     public override void Exit()
     {
+        fsm.animator.Play("UnShouting");
         fsm.Stop(Shouting());
     }
 

@@ -10,6 +10,7 @@ public class CitizenFSM : StateMachine
     public ShoutingState shouting;
     public float timeToWait;
     public float timeToSeat;
+    public Animator animator;
 
     private Wallet wallet;
     private GameObject m_Robber;
