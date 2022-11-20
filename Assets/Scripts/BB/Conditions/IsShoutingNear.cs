@@ -41,8 +41,10 @@ namespace BBUnity.Conditions
                 (float, GameObject) shoutingCitizen = shoutingCitizens.Min();
                 shouting = shoutingCitizen.Item1 < citizenDistance;
 
-                if(shouting)
+                if (shouting)
+                {
                     robber = shoutingCitizen.Item2.GetComponent<CitizenFSM>().GetRobber();
+                }
             }
 
             return shouting;

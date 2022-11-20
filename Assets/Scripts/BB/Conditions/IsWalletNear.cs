@@ -30,11 +30,16 @@ namespace BBUnity.Conditions
 
             GameObject[] wallets = citizens.Where(cit => cit.GetComponent<Wallet>().hasWallet).ToArray();
 
-            (float, GameObject) wallet = wallets.Select(w => (distance(w), w)).Min();
+            if(wallets.Length > 0)
+            {
+                (float, GameObject) wallet = wallets.Select(w => (distance(w), w)).Min();
 
-            target = wallet.Item2;
+                target = wallet.Item2;
 
-            return wallet.Item1 < walletDistance;
+                return wallet.Item1 < walletDistance;
+            }
+
+            return false;
         }
     }
 }
