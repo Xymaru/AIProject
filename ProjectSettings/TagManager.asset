@@ -7,6 +7,7 @@ TagManager:
   - hide
   - Citizen
   - Cop
+  - poop
   layers:
   - Default
   - TransparentFX

@@ -21,7 +21,7 @@ namespace BBUnity.Actions
             if (wander == null)
             {
                 wander = gameObject.AddComponent<Wander>();
-                wander.SetWanderRadius(radius);
+                //wander.SetWanderRadius(radius);
             }
         }
 

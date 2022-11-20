@@ -20,9 +20,6 @@ public class StateMachine : MonoBehaviour
     {
         if (currentState != null)
             currentState.UpdateLogic();
-
-        if (stateText.text != currentState.name)
-            stateText.text = currentState.name;
     }
 
 
