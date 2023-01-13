@@ -1,0 +1,47 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1673618227",
+        "python_version": "3.9.13 (main, Aug 25 2022, 23:51:50) [MSC v.1916 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\victo\\anaconda3\\Scripts\\mlagents-learn --tensorflow",
+        "mlagents_version": "0.30.0",
+        "mlagents_envs_version": "0.28.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.13.1+cpu",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1673618230"
+    },
+    "total": 3.2430316,
+    "count": 1,
+    "self": 0.0031778000000000084,
+    "children": {
+        "run_training.setup": {
+            "total": 0.09065710000000005,
+            "count": 1,
+            "self": 0.09065710000000005
+        },
+        "TrainerController.start_learning": {
+            "total": 3.1491967,
+            "count": 1,
+            "self": 0.00042389999999992156,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 3.1487619,
+                    "count": 1,
+                    "self": 3.1487619
+                },
+                "trainer_threads": {
+                    "total": 8.000000004670937e-07,
+                    "count": 1,
+                    "self": 8.000000004670937e-07
+                },
+                "TrainerController._save_models": {
+                    "total": 1.0099999999901854e-05,
+                    "count": 1,
+                    "self": 1.0099999999901854e-05
+                }
+            }
+        }
+    }
+}
